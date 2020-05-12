@@ -14,6 +14,7 @@ describe('Provider: Products', () => {
 
 
   beforeEach(() => {
+    // Arrange
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [ProductsService]
@@ -28,8 +29,10 @@ describe('Provider: Products', () => {
   });
 
   it('should have a non empty array called products', () => {
+    // Act
     const products = service.products;
 
+    // Assert
     expect(Array.isArray(products)).toBeTruthy();
     expect(products.length).toBeGreaterThan(0);
   });

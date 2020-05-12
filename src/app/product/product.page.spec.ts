@@ -18,15 +18,12 @@ describe('Page: Product Page', () => {
       providers: [ProductsService],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
-  }));
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(ProductPage);
     debugElement = fixture.debugElement;
     component = fixture.componentInstance;
     app = debugElement.componentInstance;
     compiled = fixture.debugElement.nativeElement;
-  });
+  }));
 
   afterEach(() => {
     fixture.destroy();
